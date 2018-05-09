@@ -9,8 +9,8 @@
   "scripts": {
     "clean": "rm -rf dist/",
     "start": "parcel src/index.html",
-    "build": "parcel build --no-cache --no-source-maps src/index.html --public-url ./",
-    "publish": "yarn run clean && yarn run build && inline-assets dist/index.html docs/index.html",
+    "_build": "parcel build --no-cache --no-source-maps src/index.html --public-url ./",
+    "build": "yarn run clean && yarn run _build && inline-assets dist/index.html docs/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
