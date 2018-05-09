@@ -7,10 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "clean": "rm -rf dist/",
+    "clean": "rm -rf docs/",
     "start": "parcel src/index.html",
-    "build": "yarn run clean && parcel build --no-cache --no-source-maps src/index.html --public-url ./",
-    "pre-bump-up": "yarn run build && inline-assets dist/index.html docs/index.html",
+    "build": "yarn run clean && parcel build --no-cache --no-source-maps src/index.html --public-url ./ -d docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +24,6 @@
   "homepage": "https://github.com/yudai524/hello-world-in-webgl#readme",
   "devDependencies": {
     "@types/three": "^0.91.12",
-    "inline-assets": "^1.2.6",
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.8.1",
     "typescript": "^2.8.3"
