@@ -1,6 +1,6 @@
 {
   "name": "hello-world-in-webgl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "WebGL の検証コード書いては push し、書いては push し...",
   "main": "index.js",
   "directories": {
