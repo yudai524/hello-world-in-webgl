@@ -8,8 +8,8 @@ function init() {
     }
   )
 
-  const width = 900
-  const height = 540
+  const width = window.innerWidth
+  const height = window.innerHeight
   renderer.setSize(width, height)
 
   // スマホでぼやけないようにデバイスピクセル比も設定
