@@ -1,0 +1,22 @@
+{
+  "name": "hello-world-in-webgl",
+  "version": "1.0.0",
+  "description": "WebGL の検証コード書いては push し、書いては push し...",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yudai524/hello-world-in-webgl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yudai524/hello-world-in-webgl/issues"
+  },
+  "homepage": "https://github.com/yudai524/hello-world-in-webgl#readme"
+}
