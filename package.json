@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rm -rf docs/",
     "start": "parcel src/index.html",
-    "build": "yarn run clean && parcel build --no-cache --no-source-maps src/index.html --public-url ./ -d docs",
+    "build": "yarn run clean && parcel build --no-cache --no-source-maps src/index.html -d docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
