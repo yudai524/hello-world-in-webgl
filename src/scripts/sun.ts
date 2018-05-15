@@ -7,7 +7,7 @@ export default class Sun extends THREE.DirectionalLight {
     super(white)
 
     // ライトの位置を変更
-    this.position.set(1, 1, 1);
+    this.position.set(1, 1, 1)
 
     // 光の強さを倍に
     this.intensity = 2

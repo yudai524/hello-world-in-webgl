@@ -1,10 +1,10 @@
 import * as THREE from 'three'
 import Earth from './earth'
-import Stars from "./stars";
-import Sun from "./sun";
-import AmbientLight from "./ambient-light";
-import Camera from "./camera";
-import Renderer from "./renderer";
+import Stars from './stars'
+import Sun from './sun'
+import AmbientLight from './ambient-light'
+import Camera from './camera'
+import Renderer from './renderer'
 
 window.addEventListener('load', init)
 

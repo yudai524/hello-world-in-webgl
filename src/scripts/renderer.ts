@@ -7,7 +7,7 @@ export default class Renderer extends THREE.WebGLRenderer {
     super(
       {
         canvas: document.querySelector(selector) as HTMLCanvasElement,
-      }
+      },
     )
 
     this.setSize(width, height)
@@ -22,7 +22,7 @@ export default class Renderer extends THREE.WebGLRenderer {
     const height = window.innerHeight
 
     // レンダラーのサイズを調整する
-    this.setSize(width, height);
-    this.setPixelRatio(window.devicePixelRatio);
+    this.setSize(width, height)
+    this.setPixelRatio(window.devicePixelRatio)
   }
 }
