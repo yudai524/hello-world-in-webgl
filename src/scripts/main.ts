@@ -25,6 +25,22 @@ function init() {
   camera.position.set(0, 0, +1000);
   const controls = new OrbitControls(camera)
 
+  window.addEventListener('resize', resize)
+
+  function resize() {
+    // サイズを取得
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // レンダラーのサイズを調整する
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(width, height);
+
+    // カメラのアスペクト比を正す
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+  }
+
   // new THREE.BoxGeometry(幅, 高さ, 奥行き)
   // const geometry = new THREE.BoxGeometry(500, 500, 500)
   const geometry = new THREE.SphereGeometry(300, 30, 30)
