@@ -14,15 +14,15 @@ export default class Renderer extends THREE.WebGLRenderer {
     // スマホでぼやけないようにデバイスピクセル比を設定
     this.setPixelRatio(window.devicePixelRatio)
 
-    // window.addEventListener('resize', this.resize)
+    window.addEventListener('resize', this.onResize.bind(this))
   }
-  //
-  // private resize() {
-  //   const width = window.innerWidth
-  //   const height = window.innerHeight
-  //
-  //   // レンダラーのサイズを調整する
-  //   this.setPixelRatio(window.devicePixelRatio);
-  //   this.setSize(width, height);
-  // }
+
+  private onResize() {
+    const width = window.innerWidth
+    const height = window.innerHeight
+
+    // レンダラーのサイズを調整する
+    this.setSize(width, height);
+    this.setPixelRatio(window.devicePixelRatio);
+  }
 }

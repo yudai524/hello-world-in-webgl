@@ -34,20 +34,4 @@ function init() {
 
     renderer.render(scene, camera);
   }
-
-  window.addEventListener('resize', resize)
-
-  function resize() {
-    // サイズを取得
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    // レンダラーのサイズを調整する
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(width, height);
-
-    // カメラのアスペクト比を正す
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-  }
 }

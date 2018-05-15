@@ -13,15 +13,15 @@ export default class Camera extends THREE.PerspectiveCamera {
     this.position.set(0, 0, +1000);
     this.controls = new OrbitControls(this)
 
-    // window.addEventListener('resize', this.resize)
+    window.addEventListener('resize', this.onResize.bind(this))
   }
-  //
-  // private resize() {
-  //   const width = window.innerWidth
-  //   const height = window.innerHeight
-  //
-  //   // カメラのアスペクト比を正す
-  //   this.aspect = width / height;
-  //   this.updateProjectionMatrix();
-  // }
+
+  private onResize() {
+    const width = window.innerWidth
+    const height = window.innerHeight
+
+    // カメラのアスペクト比を正す
+    this.aspect = width / height;
+    this.updateProjectionMatrix();
+  }
 }
