@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import { OrbitControls } from 'three-orbitcontrols-ts'
 import earthTexture from '../images/world.jpg'
 
 window.addEventListener('load', init)
@@ -22,6 +23,7 @@ function init() {
   // new THREE.PerspectiveCamera(画角, アスペクト比, 描画開始距離, 描画終了距離)
   const camera = new THREE.PerspectiveCamera(90, width / height, 1, 10000)
   camera.position.set(0, 0, +1000);
+  const controls = new OrbitControls(camera)
 
   // new THREE.BoxGeometry(幅, 高さ, 奥行き)
   // const geometry = new THREE.BoxGeometry(500, 500, 500)
@@ -79,7 +81,7 @@ function init() {
     requestAnimationFrame(tick)
 
     box.rotation.x += 0.001
-    box.rotation.y += 0.005
+    box.rotation.y += 0.003
 
     renderer.render(scene, camera);
   }

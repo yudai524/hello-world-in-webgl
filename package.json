@@ -29,6 +29,7 @@
     "typescript": "^2.8.3"
   },
   "dependencies": {
-    "three": "^0.92.0"
+    "three": "^0.92.0",
+    "three-orbitcontrols-ts": "^0.1.2"
   }
 }
