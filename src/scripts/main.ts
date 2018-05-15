@@ -13,25 +13,22 @@ function init() {
   const renderer = new Renderer('.js-canvas')
   const camera = new Camera()
 
-  const earth = new Earth()
-  scene.add(earth)
-
-  const stars = new Stars()
-  scene.add(stars);
-
-  const sun = new Sun()
-  scene.add(sun)
-
   const ambientLight = new AmbientLight()
+  const sun = new Sun()
+  const earth = new Earth()
+  const stars = new Stars()
+
   scene.add(ambientLight)
+  scene.add(sun)
+  scene.add(earth)
+  scene.add(stars)
 
   tick()
 
   function tick() {
-    requestAnimationFrame(tick)
-
     earth.update()
 
-    renderer.render(scene, camera);
+    renderer.render(scene, camera)
+    requestAnimationFrame(tick)
   }
 }
